@@ -1,0 +1,62 @@
+{
+  "name": "domain-sort",
+  "displayName": "Domain Sort",
+  "description": "Sort lines by top-level domain and extract the host field from JSON lines.",
+  "version": "0.0.1",
+  "icon": "images/icon.png",
+  "publisher": "F0xh0le",
+  "license": "GPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/F0xh0le/Domain-sort.git"
+  },
+  "engines": {
+    "vscode": "^1.135.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "domain",
+    "sort",
+    "subdomain",
+    "json",
+    "host",
+    "recon"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "domainSort.ascending",
+        "title": "Domain Sort: Sort Ascending"
+      },
+      {
+        "command": "domainSort.descending",
+        "title": "Domain Sort: Sort Descending"
+      },
+      {
+        "command": "domainSort.extractHost",
+        "title": "Domain Sort: Extract Host Field"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.135.0",
+    "@types/node": "24.x",
+    "typescript-eslint": "^8.61.1",
+    "eslint": "^10.5.0",
+    "typescript": "^6.0.3"
+  },
+  "overrides": {
+    "diff": "^8.0.4",
+    "serialize-javascript": "^7.0.6"
+  }
+}
